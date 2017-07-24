@@ -16,13 +16,13 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="<?php echo $appPath; ?>">Home <span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Items <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Items <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Movies</a></li>
+            <li><a href="<?php echo $appPath;?>private/items/gameItems.php">Games</a></li>
+            <li><a href="<?php echo $appPath;?>private/items/musicItems.php">Music</a></li>
+            <li><a href="<?php echo $appPath;?>private/items/movieItems.php">Movies</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Create item</a></li>
+            <li><a href="<?php echo $appPath;?>private/items/createItem.php">Create item</a></li>
           </ul>
         </li>
         <li><a href="<?php echo $appPath; ?>public/aboutus.php">About us</a></li>

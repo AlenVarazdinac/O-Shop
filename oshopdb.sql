@@ -16,4 +16,9 @@ values
 ("Counter Strike: Global Offensive", 12.99, "Game"),
 ("Overwatch", 27.49, "Game"),
 ("Rust", 13.40, "Game"),
-("Rocket League", 13.97, "Game");
+("Rocket League", 13.97, "Game"),
+("Dunkirk", 16.99, "Movie"),
+("Despicable Me 3", 12.49, "Movie"),
+("Cars 3", 14.87, "Movie"),
+("Fast & Furious 8", 15.21, "Movie"),
+("Hardwell & KAAZE - We Are Legends", 2.99, "Music");

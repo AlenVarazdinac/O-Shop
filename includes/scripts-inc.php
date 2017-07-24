@@ -1,4 +1,4 @@
 <!-- jQuery -->
-<script src="scripts/jquery-3.2.1.min.js"></script>
+<script src="<?php echo $appPath;?>scripts/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap Js -->
-<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="<?php echo $appPath;?>bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>

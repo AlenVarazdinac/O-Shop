@@ -5,6 +5,7 @@
 <title><?php echo $appName; ?></title>
 
 <!-- Bootstrap -->
-<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="<?php echo $appPath;?>bootstrap-3.3.7-dist/css/bootstrap.min.css"
+rel="stylesheet" />
 <!-- My Style -->
-<link href="styles/main.css" rel="stylesheet" />
+<link href="<?php echo $appPath;?>styles/main.css" rel="stylesheet" />
