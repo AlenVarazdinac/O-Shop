@@ -27,13 +27,13 @@ include_once '../../includes/dbh-inc.php'; ?>
 
                 <!-- ## Item Name ## -->
                 <div class="form-group">
-                    <label class="control-label" for="itemName">Item name</label>
+                    <label class="control-label" for="item_name">Item name</label>
                     <input type="text" class="form-control" name="item_name" id="item_name" placeholder="Enter item name" />
                 </div>
 
                 <!-- ## Item Price ## -->
                 <div class="form-group">
-                    <label class="control-label" for="itemPrice">Item price</label>
+                    <label class="control-label" for="item_price">Item price</label>
                     <div class="input-group">
                         <span class="input-group-addon">$</span>
                         <input type="number" step="0.01" min="0.00" class="form-control" name="item_price" id="item_price" placeholder="Enter item price" />
@@ -42,7 +42,7 @@ include_once '../../includes/dbh-inc.php'; ?>
 
                 <!-- ## Item Type ## -->
                 <div class="form-group">
-                    <label class="control-label" for="itemType">Item type</label>
+                    <label class="control-label" for="item_type">Item type</label>
                     <select class="form-control" id="item_type" name="item_type">
                         <option value="none">None</option>
                         <option value="game">Game</option>

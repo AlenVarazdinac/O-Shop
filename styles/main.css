@@ -2,27 +2,48 @@
   margin-top: 2em;
 }
 
-
 /* ## Create Item Panel ## */
 
 #create_item_panel {
     margin-top: 4em;
 }
 
-#item_name {
-    
-}
-
-#item_price {
-    
-}
-
-#item_type {
-
-}
+#item_name {}
+#item_price {}
+#item_type {}
 
 #create_item_btn {
     margin-top: 2.5em;
 }
 
-/* ## Create Item Panel End ## /*
+/* ## Create Item Panel End ## */
+
+/* ## Log In Panel */
+
+#login_panel {
+    margin-top: 4em;
+}
+
+#login_email {}
+#login_pw {}
+
+#login_btn {
+    margin-top: 3em;
+}
+
+/* ## Log In Panel End */
+
+/* ## Register Panel ## */
+#register_panel {
+    margin-top: 4em;
+}
+
+#register_name {}
+#register_email {}
+#register_pw {}
+
+#register_btn {
+    margin-top: 3em;
+}
+
+/* ## Register Panel End ## */

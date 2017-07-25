@@ -28,8 +28,8 @@
         <li><a href="<?php echo $appPath; ?>public/aboutus.php">About us</a></li>
       </ul>
       <form class="navbar-form navbar-right">
-        <a href="<?php echo $appPath; ?>login.php" type="submit" class="btn btn-default">Log in</a>
-        <a href="<?php echo $appPath; ?>register.php" type="submit" class="btn btn-default">Register</a>
+        <a href="<?php echo $appPath; ?>public/login.php" type="submit" class="btn btn-default">Log in</a>
+        <a href="<?php echo $appPath; ?>public/register.php" type="submit" class="btn btn-default">Register</a>
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

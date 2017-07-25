@@ -11,6 +11,15 @@ item_price  DECIMAL(18,2) NOT NULL,
 item_type   VARCHAR(10) NOT NULL
 );
 
+create table user(
+user_id     INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+user_name   VARCHAR(50) NOT NULL,
+user_email  VARCHAR(50) NOT NULL,
+user_pw     CHAR(32) NOT NULL,
+user_rights INT(1) NOT NULL,
+user_gender VARCHAR(15) NOT NULL
+);
+
 insert into item(item_name, item_price, item_type)
 values
 ("Counter Strike: Global Offensive", 12.99, "Game"),
@@ -22,3 +31,8 @@ values
 ("Cars 3", 14.87, "Movie"),
 ("Fast & Furious 8", 15.21, "Movie"),
 ("Hardwell & KAAZE - We Are Legends", 2.99, "Music");
+
+insert into user(user_name, user_email, user_pw, user_rights, user_gender)
+values
+('AlenV', 'alen.varazdinac@gmail.com', md5('123'), 1, 'Male'),
+('TestUser', 'utest@gmail.com', md5('123'), 0, 'Female');
