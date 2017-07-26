@@ -2,11 +2,13 @@
 include_once '../includes/dbh-inc.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- ### Include Head ### -->
     <?php include_once '../includes/head-inc.php'; ?>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- ### Navigation ### -->
     <?php include_once '../includes/navigation-inc.php'; ?>
@@ -28,7 +30,7 @@ include_once '../includes/dbh-inc.php'; ?>
                     <label class="control-label" for="register_email">E-mail</label>
                     <input type="email" class="form-control" name="register_email" id="register_email" placeholder="Enter your e-mail" />
                 </div>
-                
+
                 <!-- ## User Name ## -->
                 <div class="form-group">
                     <label class="control-label" for="register_name">Username</label>
@@ -39,6 +41,21 @@ include_once '../includes/dbh-inc.php'; ?>
                 <div class="form-group">
                     <label class="control-label" for="register_pw">Password</label>
                     <input type="password" class="form-control" name="register_pw" id="register_pw" placeholder="Enter your password" />
+                </div>
+
+                <!-- ## User Gender ## -->
+                <div class="form-group">
+                    <label id="gender_txt">Gender</label>
+                    <div id="gender_select">
+                        <label class="radio-inline">
+                        <input type="radio" name="reg_gender" 
+                        value="Male" />Male
+                    </label>
+                        <label class="radio-inline">
+                        <input type="radio" name="reg_gender" 
+                        value="Female" />Female
+                    </label>
+                    </div>
                 </div>
 
                 <!-- ## Register Button ## -->
@@ -53,5 +70,6 @@ include_once '../includes/dbh-inc.php'; ?>
 
     <!-- ### Scripts ### -->
     <?php include_once '../includes/scripts-inc.php'; ?>
-  </body>
+</body>
+
 </html>
