@@ -15,6 +15,9 @@ include_once '../includes/dbh-inc.php'; ?>
     <!-- ### Main Content ### -->
     
     <!-- ### Main Content End ### -->
+    
+    <!-- ### Footer ### -->
+    <?php include_once '../includes/footer-inc.php';?>
 
     <!-- ### Scripts ### -->
     <?php include_once '../includes/scripts-inc.php'; ?>

@@ -67,7 +67,10 @@ include_once '../includes/dbh-inc.php'; ?>
         </div>
     </div>
     <!-- ### Main Content End ### -->
-
+    
+    <!-- ### Footer ### -->
+    <?php include_once '../includes/footer-inc.php';?>
+    
     <!-- ### Scripts ### -->
     <?php include_once '../includes/scripts-inc.php'; ?>
 </body>

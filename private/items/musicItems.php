@@ -23,7 +23,7 @@ include_once '../../includes/dbh-inc.php'; ?>
           <div class="row">
 
               <?php
-              $command = $conn->query("SELECT * FROM item WHERE item_type='Music';");
+              $command = $conn->query('SELECT item.item_name, item.item_price, item_type.item_type_name FROm item RIGHT JOIN item_type ON item.item_type_id = item_type.item_type_id WHERE item_type.item_type_name="Music";');
               $command->execute();
               $results = $command->fetchAll(PDO::FETCH_OBJ);
               foreach ($results as $item) { ?>
@@ -32,7 +32,7 @@ include_once '../../includes/dbh-inc.php'; ?>
 
                 <?php
                 $panel->createPanel($item->item_name,
-                $item->item_type,
+                $item->item_type_name,
                 $item->item_price,
                 "Buy");
                 ?>
@@ -44,7 +44,10 @@ include_once '../../includes/dbh-inc.php'; ?>
         </div>
 
     <!-- ### Main Content End ### -->
-
+    
+    <!-- ### Footer ### -->
+    <?php include_once '../../includes/footer-inc.php';?>
+    
     <!-- ### Scripts ### -->
     <?php include_once '../../includes/scripts-inc.php'; ?>
   </body>

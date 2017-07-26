@@ -2,11 +2,13 @@
 include_once '../../includes/dbh-inc.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- ### Include Head ### -->
     <?php include_once '../../includes/head-inc.php'; ?>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- ### Navigation ### -->
     <?php include_once '../../includes/navigation-inc.php'; ?>
@@ -14,38 +16,41 @@ include_once '../../includes/dbh-inc.php'; ?>
 
     <!-- ### Main Content ### -->
     <?php include_once '../../includes/itempanel-inc.php'; ?>
-    <?php
-      $panel = new Panel();
-    ?>
-      <!-- ### Create Panels ### -->
-
+       
+        <!-- ### Create Panels ### -->
         <div class="container">
-          <div class="row">
+            <div class="row">
 
-              <?php
-              $command = $conn->query("SELECT * FROM item WHERE item_type='Game';");
+            <?php
+                $panel = new Panel();
+
+              $command = $conn->query('SELECT item.item_name, item.item_price, item_type.item_type_name FROm item RIGHT JOIN item_type ON item.item_type_id = item_type.item_type_id WHERE item_type.item_type_name="Game";');
               $command->execute();
               $results = $command->fetchAll(PDO::FETCH_OBJ);
               foreach ($results as $item) { ?>
 
-                <div class="col-lg-3 col-sm-6 ">
+                    <div class="col-lg-3 col-sm-6">
 
-                <?php
-                $panel->createPanel($item->item_name,
-                $item->item_type,
-                $item->item_price,
-                "Buy");
-                ?>
+                        <?php
+                        $panel->createPanel($item->item_name,
+                        $item->item_type_name,
+                        $item->item_price,
+                        "Buy");
+                        ?>
 
-              </div>
-              <?php } ?>
+                    </div>
+                <?php } ?>
 
-          </div>
+            </div>
         </div>
 
-    <!-- ### Main Content End ### -->
+        <!-- ### Main Content End ### -->
 
-    <!-- ### Scripts ### -->
-    <?php include_once '../../includes/scripts-inc.php'; ?>
-  </body>
+        <!-- ### Footer ### -->
+        <?php include_once '../../includes/footer-inc.php';?>
+
+        <!-- ### Scripts ### -->
+        <?php include_once '../../includes/scripts-inc.php'; ?>
+</body>
+
 </html>
