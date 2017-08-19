@@ -25,7 +25,7 @@ include_once 'includes/dbh-inc.php'; ?>
    
     <div class="container">
         <div class="row">
-            <h3>Browse for...</h3>
+            <h3>Browse</h3>
         </div>
         
     <!-- ### Main Panels ### -->

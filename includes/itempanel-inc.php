@@ -1,12 +1,14 @@
 <?php
+include_once '../../config.php';
 
 class Panel {
   public $panelName;
   public $panelType;
   public $panelPrice;
   public $panelButton;
+  public $panelRemoveButton;
         
-public function createPanel($panelName, $panelType, $panelPrice, $panelButton) { ?>
+public function createPanel($panelName, $panelType, $panelPrice, $panelButton, $panelRemoveButton) { ?>
 
     <div class="panel panel-primary" id="product_panel">
         <!-- ## Panel Title ## -->
@@ -31,6 +33,19 @@ public function createPanel($panelName, $panelType, $panelPrice, $panelButton) {
             <a href="#" type="submit" class="btn btn-primary center-block">
                 <?php echo $panelButton; ?>
             </a>
+
+            <?php if (isset($_SESSION["logged"]) && 
+                      $_SESSION["logged"]->user_rights===1): ?>
+
+            <a href="removeItem.php?itemname=<?php echo $panelName;?>" 
+              type="submit" 
+               class="btn btn-danger center-block">
+                <?php echo $panelRemoveButton; ?>
+            </a>
+
+            <?php endif; ?>
+
+
         </div>
     </div>
 

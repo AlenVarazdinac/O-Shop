@@ -26,9 +26,11 @@
 
 #login_email {}
 #login_pw {}
-
+#login_text {
+    font-size: 15px;
+}
 #login_btn {
-    margin-top: 3em;
+    margin-top: 0em;
 }
 
 /* ## Log In Panel End */
@@ -48,3 +50,17 @@
 }
 
 /* ## Register Panel End ## */
+
+#type_panel {
+    height: 400px;
+}
+
+#type_panel_st {
+    height: 350px;
+    width: auto;
+}
+
+#type_img {
+    height: 220px;
+    width: 150px;
+}

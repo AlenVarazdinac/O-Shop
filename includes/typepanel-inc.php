@@ -6,9 +6,9 @@ class TypePanel {
     public $typePanelLink;
 
     public function createTypePanel($typePanelName, $typePanelImg, $typePanelLink) { ?>
-    <div class="col-lg-4 col-sm-6">
+    <div id="type_panel" class="col-lg-4 col-sm-6">
 
-        <div class="panel panel-primary" id="type_panel">
+        <div class="panel panel-primary" id="type_panel_st">
            
            <!-- ## Panel Title ## -->
             <div class="panel-heading">

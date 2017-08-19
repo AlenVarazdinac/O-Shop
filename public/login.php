@@ -2,32 +2,19 @@
 include_once '../includes/dbh-inc.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- ### Include Head ### -->
     <?php include_once '../includes/head-inc.php'; ?>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- ### Navigation ### -->
     <?php include_once '../includes/navigation-inc.php'; ?>
     <!-- ### Navigation End ### -->
 
     <!-- ### Main Content ### -->
-    
-    <?php
-      if (isset($_GET["badlogin"])) {
-          echo "Wrong e-mail or password!";
-      }
-      if (isset($_GET["norights"])) {
-          echo "Log in first!";
-      }
-      if (isset($_GET["loggedout"])) {
-          echo "You have successfully logged out!";
-      }
-      
-    ?>
-    
-    
     <!-- ### Login Panel ### -->
     <div class="container" id="login_panel">
         <div class="row col-md-6 col-md-offset-3">
@@ -50,6 +37,22 @@ include_once '../includes/dbh-inc.php'; ?>
                     <input type="password" class="form-control" name="login_pw" id="login_pw" placeholder="Enter your password" />
                 </div>
 
+                <div class="form-group">
+                    <p id="login_text" class="text-center">
+                        <?php
+                          if (isset($_GET["badlogin"])) {
+                              echo "Wrong e-mail or password!";
+                          }
+                          if (isset($_GET["norights"])) {
+                              echo "Log in first!";
+                          } 
+                          if (isset($_GET["loggedout"])) {
+                              echo "You have successfully logged out!";
+                          } ?>     
+                    </p>
+                    
+                </div>
+
                 <!-- ## Login Button ## -->
                 <div class="form-group">
                     <button class="btn btn-primary form-control" id="login_btn">Log in</button>
@@ -59,11 +62,12 @@ include_once '../includes/dbh-inc.php'; ?>
         </div>
     </div>
     <!-- ### Main Content End ### -->
-    
+
     <!-- ### Footer ### -->
     <?php include_once '../includes/footer-inc.php';?>
-    
+
     <!-- ### Scripts ### -->
     <?php include_once '../includes/scripts-inc.php'; ?>
-  </body>
+</body>
+
 </html>

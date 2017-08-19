@@ -1,5 +1,6 @@
 <?php include_once '../../config.php';
-include_once '../../includes/dbh-inc.php'; ?>
+include_once '../../includes/dbh-inc.php'; 
+loginCheck();?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +35,8 @@ include_once '../../includes/dbh-inc.php'; ?>
                 $panel->createPanel($item->item_name,
                 $item->item_type_name,
                 $item->item_price,
-                "Buy");
+                "Buy",
+                "Remove");
                 ?>
 
               </div>

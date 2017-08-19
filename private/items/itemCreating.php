@@ -8,7 +8,7 @@ $itemPrice = $_POST["item_price"];
 $itemType = $_POST["item_type"];
 
 try {
-    $command = $conn->query("INSERT INTO item(item_name, item_price, item_type) 
+    $command = $conn->query("INSERT INTO item(item_name, item_price, item_type_id) 
     VALUES ('$itemName', '$itemPrice', '$itemType')");
     header("location: " . $appPath . "private/items/createItem.php");        
 } catch (PDOException $e) {

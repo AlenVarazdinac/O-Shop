@@ -1,5 +1,8 @@
 <?php include_once '../../config.php';
-include_once '../../includes/dbh-inc.php'; ?>
+include_once '../../includes/dbh-inc.php';
+loginCheck();
+$searchItem = isset($_GET["searchItem"]) ? $_GET["searchItem"] : "";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +19,10 @@ include_once '../../includes/dbh-inc.php'; ?>
 
     <!-- ### Main Content ### -->
     <?php include_once '../../includes/itempanel-inc.php'; ?>
-       
-        <!-- ### Create Panels ### -->
-        <div class="container">
-            <div class="row">
+
+    <!-- ### Create Panels ### -->
+    <div class="container">
+        <div class="row">
 
             <?php
                 $panel = new Panel();
@@ -29,28 +32,29 @@ include_once '../../includes/dbh-inc.php'; ?>
               $results = $command->fetchAll(PDO::FETCH_OBJ);
               foreach ($results as $item) { ?>
 
-                    <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6">
 
-                        <?php
+                    <?php
                         $panel->createPanel($item->item_name,
                         $item->item_type_name,
                         $item->item_price,
-                        "Buy");
+                        "Buy",
+                        "Remove");
                         ?>
 
-                    </div>
+                </div>
                 <?php } ?>
 
-            </div>
         </div>
+    </div>
 
-        <!-- ### Main Content End ### -->
+    <!-- ### Main Content End ### -->
 
-        <!-- ### Footer ### -->
-        <?php include_once '../../includes/footer-inc.php';?>
+    <!-- ### Footer ### -->
+    <?php include_once '../../includes/footer-inc.php';?>
 
-        <!-- ### Scripts ### -->
-        <?php include_once '../../includes/scripts-inc.php'; ?>
+    <!-- ### Scripts ### -->
+    <?php include_once '../../includes/scripts-inc.php'; ?>
 </body>
 
 </html>

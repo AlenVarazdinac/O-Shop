@@ -1,5 +1,6 @@
 <?php include_once '../../config.php';
-include_once '../../includes/dbh-inc.php'; ?>
+include_once '../../includes/dbh-inc.php';
+rightsCheck(1);?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,9 +46,9 @@ include_once '../../includes/dbh-inc.php'; ?>
                     <label class="control-label" for="item_type">Item type</label>
                     <select class="form-control" id="item_type" name="item_type">
                         <option value="none">None</option>
-                        <option value="game">Game</option>
-                        <option value="music">Music</option>
-                        <option value="movie">Movie</option>
+                        <option value="1">Game</option>
+                        <option value="2">Movie</option>
+                        <option value="3">Music</option>
                    </select>
                 </div>
 
