@@ -37,7 +37,11 @@
                     </ul>
 
                 </li>
+                
+                <li><a href="<?php echo $appPath;?>private/dashboard.php">Dashboard</a></li>
+                
                 <?php endif; ?>
+                <li><a href="https://github.com/AlenVarazdinac/O-Shop">GitHub code</a></li>
                 <li><a href="<?php echo $appPath; ?>public/aboutus.php">About us</a></li>
             </ul>
 
@@ -60,12 +64,12 @@
                 <li class="dropdown">
                     <!-- Set name in navigation -->
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <?php echo $_SESSION["logged"]->user_name;?>
-                    <span class="caret"></span></a>
-                    
+                        <?php echo $_SESSION["logged"]->user_name;?>
+                        <span class="caret"></span></a>
+
                     <ul class="dropdown-menu">
                         <li><a href="#">Change password</a></li>
-                        
+
                         <li role="separator" class="divider"></li>
                         <li><a href="<?php echo $appPath; ?>public/logout.php" type="submit" class="btn btn-danger">Log out</a></li>
                     </ul>

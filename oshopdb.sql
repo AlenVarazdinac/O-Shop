@@ -33,11 +33,18 @@ values
 ("Overwatch", 27.49, 1),
 ("Rust", 13.40, 1),
 ("Rocket League", 13.97, 1),
+("Grand Theft Auto V", 32.12, 1),
 ("Dunkirk", 16.99, 2),
 ("Despicable Me 3", 12.49, 2),
 ("Cars 3", 14.87, 2),
+("Annabelle: Creation", 11.30, 2),
 ("Fast & Furious 8", 15.21, 2),
-("Hardwell & KAAZE - We Are Legends", 2.99, 3);
+("6 Days", 18.00, 2),
+("Hardwell & KAAZE - We Are Legends", 2.99, 3),
+("Alan Walker - Faded", 1.99, 3),
+("Alan Walker - Alone", 1.99, 3),
+("Galantis - Runaway", 1.80, 3),
+("SIA - Cheap Trills", 1.49, 3);
 
 insert into user(user_name, user_email, user_pw, user_rights, user_gender)
 values
